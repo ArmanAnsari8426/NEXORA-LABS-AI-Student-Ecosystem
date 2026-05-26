@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { Analytics } from '@vercel/analytics/react';
 import { AppProvider, useApp } from './context/AppContext';
 import { Navbar } from './components/Navbar';
 import { Footer } from './components/Footer';
@@ -53,6 +54,7 @@ export const App: React.FC = () => {
     <AppProvider>
       <Router>
         <ScrollToTop />
+        <Analytics />
         <div className="min-h-screen bg-slate-950 flex flex-col justify-between selection:bg-cyan-500 selection:text-slate-950 overflow-x-hidden">
           <Navbar />
           <NotificationBanner />
