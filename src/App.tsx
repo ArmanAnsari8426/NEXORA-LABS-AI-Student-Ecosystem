@@ -19,6 +19,7 @@ import { AdminPanel } from './pages/AdminPanel';
 import { Profile } from './pages/Profile';
 import { NotFound } from './pages/NotFound';
 import { AnimatePresence, motion } from 'framer-motion';
+import { Analytics } from '@vercel/analytics/react';
 
 const ScrollToTop: React.FC = () => {
   const { pathname } = useLocation();
@@ -79,6 +80,7 @@ export const App: React.FC = () => {
 
           <Footer />
         </div>
+        <Analytics />
       </Router>
     </AppProvider>
   );
